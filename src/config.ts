@@ -35,3 +35,4 @@ export const SIG_LEN_PLUS_TAG = 65
 export const KEY_LENGTH = 32
 export const XFVK_LENGTH = 1 + 2 * TAG_LEN + 5 * KEY_LENGTH
 export const RANDOMNESS_LENGTH = 32
+export const PAYMENT_ADDR_LENGTH = 43

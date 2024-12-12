@@ -15,7 +15,7 @@
  ******************************************************************************* */
 
 import { errorCodeToString } from './common'
-import { KEY_LENGTH, PK_LEN_PLUS_TAG, RANDOMNESS_LENGTH, SALT_LEN, SIG_LEN_PLUS_TAG, XFVK_LENGTH } from './config'
+import { KEY_LENGTH, PAYMENT_ADDR_LENGTH, PK_LEN_PLUS_TAG, RANDOMNESS_LENGTH, SALT_LEN, SIG_LEN_PLUS_TAG, XFVK_LENGTH } from './config'
 import {
   ISignature,
   KeyResponse,
@@ -103,7 +103,7 @@ export function processGetKeysResponse(response: Buffer, keyType: NamadaKeys): K
 
   switch (keyType) {
     case NamadaKeys.PublicAddress: {
-      const publicAddress = Buffer.from(response.subarray(0, KEY_LENGTH))
+      const publicAddress = Buffer.from(response.subarray(0, PAYMENT_ADDR_LENGTH))
       requestedKey = {
         ...requestedKey,
         publicAddress,
