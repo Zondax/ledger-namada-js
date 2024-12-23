@@ -45,10 +45,7 @@ export interface ResponseAddress extends ResponseBase {
 }
 
 export interface ResponseViewKey extends ResponseBase {
-  viewKey?: Buffer
-  ivk?: Buffer
-  ovk?: Buffer
-  dk?: Buffer
+  xfvk?: Buffer
 }
 
 export interface ResponseProofGenKey extends ResponseBase {
